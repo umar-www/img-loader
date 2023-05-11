@@ -53,9 +53,23 @@ body {
   transform: scale(1.05);
 }
 
+.check{
+  /* z-index: 1; */
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+  color: green;
+}
+
 /* =========================================== */
 
 .anime {
+  z-index: 2;
   position: absolute;
   display: flex;
   width: 400px;

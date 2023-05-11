@@ -3,9 +3,9 @@ const images = document.querySelectorAll("img");
 const loader = document.querySelectorAll(".anime");
 const counter = document.querySelector<HTMLElement>(".counter");
 const text = document.querySelector(".text");
+const checked = document.querySelectorAll(".check");
 let count = 0;
 
-console.log(counter);
 
 function loaderImg() {
   images.forEach((item, idx) => {
@@ -13,10 +13,17 @@ function loaderImg() {
       count++;
       if (counter) counter.textContent = `${count}`;
       loader[idx].remove();
+
+      checked.forEach((item) =>{
+        if(count == 4){
+          item.remove();
+        }
+      })
     });
   });
 }
 loaderImg();
+
 reloadBtn?.addEventListener("click", () => {
   window.location.reload();
 });
